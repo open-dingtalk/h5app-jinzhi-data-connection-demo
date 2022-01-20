@@ -89,10 +89,18 @@ git clone https://github.com/open-dingtalk/h5app-jinzhi-data-connection-demo.git
 
 ## 6. 参考文档
 
-1. 获取企业内部应用access_token，文档链接：https://open.dingtalk.com/document/orgapp-server/obtain-orgapp-token
-2. 根据userId获取用户详情，文档链接：https://open.dingtalk.com/document/orgapp-server/query-user-details
-3. 发送消息通知，文档链接：https://open.dingtalk.com/document/orgapp-server/asynchronous-sending-of-enterprise-session-messages
-4. 上传媒体文件，文档链接：https://open.dingtalk.com/document/orgapp-server/upload-media-files
+1. 创建企业内部应用，文档链接：https://open.dingtalk.com/document/org/orgapp-development-process
+2. 获取企业内部应用access_token：文档链接：https://open.dingtalk.com/document/orgapp-server/obtain-orgapp-token
+3. 获取部门用户基础信息，文档链接：https://open.dingtalk.com/document/orgapp-server/queries-the-simple-information-of-a-department-user
+4. 客户资料，文档链接：https://open.dingtalk.com/document/orgapp-server/add-or-edit-customer-profile
+5. 产品信息，文档链接：https://open.dingtalk.com/document/orgapp-server/add-or-edit-product-information
+6. 销售机会，文档链接：https://developers.dingtalk.com/document/app/get-a-list-of-all-contracts-for-the-process-taskhttps://open.dingtalk.com/document/orgapp-server/add-or-edit-opportunities
+7. 报价记录，文档链接：https://open.dingtalk.com/document/orgapp-server/add-or-edit-quotation-records
+8. 合同订单，文档链接：https://open.dingtalk.com/document/orgapp-server/add-or-edit-contract-orders
+9. 采购单，文档链接：https://open.dingtalk.com/document/orgapp-server/edit-purchase-order
+10. 发货单，文档链接：https://open.dingtalk.com/document/orgapp-server/add-or-edit-invoices
+11. 获取数据详情，文档链接：https://open.dingtalk.com/document/orgapp-server/queries-data-details
+12. 获取数据列表，文档链接：https://open.dingtalk.com/document/orgapp-server/obtain-the-data-list
 
 
 ## 7.免责声明
