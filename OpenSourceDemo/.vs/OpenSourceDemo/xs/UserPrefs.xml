@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{82A4BB07-E57C-420F-95A9-D6D4C8C080F6}|">
+  <MonoDevelop.Ide.ItemProperties.OpenSourceDemo PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Web.config">
+    <Files>
+      <File FileName="api/DataManage.ashx.cs" Line="380" Column="89" />
+      <File FileName="Web.config" Line="33" Column="17" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="OpenSourceDemo" expanded="True">
+            <Node name="OpenSourceDemo" expanded="True">
+              <Node name="api" expanded="True">
+                <Node name="DataManage.ashx" expanded="True" />
+              </Node>
+              <Node name="Web.config" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

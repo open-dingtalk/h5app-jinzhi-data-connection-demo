@@ -1,0 +1,48 @@
+{
+  "dataname": [
+    {
+      "label": "data_userid",
+      "type": "select",
+      "value": "创建人"
+    },
+    {
+      "label": "gysid",
+      "type": "select",
+      "value": "供应商"
+    },
+    {
+      "label": "cgno",
+      "type": "input",
+      "value": "采购单号"
+    },
+    {
+      "label": "summoney",
+      "type": "input",
+      "value": "采购金额"
+    },
+    {
+      "label": "cgdate",
+      "type": "date",
+      "value": "采购日期"
+    },
+    {
+      "label": "cg_zxstate",
+      "type": "select",
+      "value": "执行状态",
+      "option": [
+        {
+          "label": 0,
+          "value": "执行中"
+        },
+        {
+          "label": 1,
+          "value": "结束"
+        },
+        {
+          "label": 2,
+          "value": "意外终止"
+        }
+      ]
+    }
+  ]
+}

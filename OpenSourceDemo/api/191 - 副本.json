@@ -1,0 +1,60 @@
+{
+  "dataname": [
+    {
+      "label": "data_userid",
+      "value": "创建人"
+    },
+    {
+      "label": "libiodate",
+      "value": "出库日期"
+    },
+    {
+      "label": "stocklibid",
+      "value": "出库仓库"
+    },
+    {
+      "label": "libiostate",
+      "value": "出库状态"
+    },
+    {
+      "label": "billno",
+      "value": "出库单号"
+    },
+    {
+      "label": "customerid",
+      "value": "对应客户"
+    },
+    {
+      "label": "empid",
+      "value": "经办人"
+    },
+    {
+      "label": "inorout",
+      "value": "单据类型"
+    },
+    {
+      "label": "libioname",
+      "value": "出库主题"
+    },
+    {
+      "label": "orderid",
+      "value": "对应订单"
+    },
+    {
+      "label": "askempid",
+      "value": "申请人"
+    },
+    {
+      "label": "remark",
+      "value": "申请备注"
+    },
+    {
+      "label": "auditreson",
+      "value": "出库备注"
+    },
+    {
+      "label": "child_mx",
+      "value": "产品明细"
+    }
+  ]
+}

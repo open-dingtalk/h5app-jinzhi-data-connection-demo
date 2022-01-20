@@ -1,0 +1,72 @@
+{
+  "dataname": [
+    {
+      "label": "data_userid",
+      "type": "select",
+      "value": "创建人"
+    },
+    {
+      "label": "ht_customerid",
+      "type": "select",
+      "value": "对应客户"
+    },
+    {
+      "label": "ht_date",
+      "type": "date",
+      "value": "签单日期"
+    },
+    {
+      "label": "ht_preside",
+      "type": "select",
+      "value": "所有者"
+    },
+    {
+      "label": "ht_state",
+      "type": "select",
+      "value": "状态",
+      "option": [
+        {
+          "label": 0,
+          "value": "执行中"
+        },
+        {
+          "label": 1,
+          "value": "结束"
+        },
+        {
+          "label": 2,
+          "value": "意外终止"
+        }
+      ]
+    },
+    {
+      "label": "ht_summoney",
+      "type": "input",
+      "value": "总金额"
+    },
+    {
+      "label": "ht_order",
+      "type": "select",
+      "value": "单据类型",
+      "option": [
+        {
+          "label": 0,
+          "value": "合同"
+        },
+        {
+          "label": 1,
+          "value": "合同订单"
+        },
+        {
+          "label": 2,
+          "value": "店面单"
+        }
+      ]
+    },
+    {
+      "label": "ht_title",
+      "type": "input",
+      "value": "主题"
+    }
+  ]
+}

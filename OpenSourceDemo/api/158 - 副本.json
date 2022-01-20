@@ -1,0 +1,80 @@
+{
+  "dataname": [
+    {
+      "label": "data_userid",
+      "value": "创建人"
+    },
+    {
+      "label": "xsh_customerid",
+      "value": "对应客户"
+    },
+    {
+      "label": "xsh_title",
+      "value": "主题"
+    },
+    {
+      "label": "xsh_date",
+      "value": "发现时间"
+    },
+    {
+      "label": "xsh_number",
+      "value": "机会编号"
+    },
+    {
+      "label": "xsh_lxrid",
+      "value": "联系人"
+    },
+    {
+      "label": "xsh_lianxi",
+      "value": "联系方式"
+    },
+    {
+      "label": "xsh_type",
+      "value": "类型"
+    },
+    {
+      "label": "xsh_from",
+      "value": "来源"
+    },
+    {
+      "label": "xsh_preside",
+      "value": "所有者"
+    },
+    {
+      "label": "xsh_provider",
+      "value": "提供人"
+    },
+    {
+      "label": "xsh_require",
+      "value": "客户需求"
+    },
+    {
+      "label": "xsh_expdate",
+      "value": "预计签单日"
+    },
+    {
+      "label": "xsh_expmoney",
+      "value": "预期金额"
+    },
+    {
+      "label": "xsh_moneynote",
+      "value": "外币备注"
+    },
+    {
+      "label": "xsh_phase",
+      "value": "阶段"
+    },
+    {
+      "label": "xsh_knx",
+      "value": "可能性"
+    },
+    {
+      "label": "xsh_state",
+      "value": "状态"
+    },
+    {
+      "label": "xsh_phasenote",
+      "value": "阶段备注"
+    }
+  ]
+}

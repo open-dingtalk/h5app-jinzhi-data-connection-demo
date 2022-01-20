@@ -1,0 +1,29 @@
+{
+  "dataname": [
+    {
+      "label": "data_userid",
+      "type": "select",
+      "value": "创建人"
+    },
+    {
+      "label": "fh_customerid",
+      "type": "select",
+      "value": "对应客户"
+    },
+    {
+      "label": "fh_date",
+      "type": "date",
+      "value": "发货日期"
+    },
+    {
+      "label": "fh_number",
+      "type": "input",
+      "value": "发货单号"
+    },
+    {
+      "label": "fh_mode",
+      "type": "input",
+      "value": "发货方式"
+    }
+  ]
+}

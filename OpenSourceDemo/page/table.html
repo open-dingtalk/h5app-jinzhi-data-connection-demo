@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>layui</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="../lib/jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="../lib/layui-v2.5.5/css/layui.css" media="all">
+    <link rel="stylesheet" href="../css/public.css" media="all">
+</head>
+<body>
+<div class="layuimini-container">
+    <div class="layuimini-main">
+        <script type="text/html" id="toolbarDemo">
+            <div class="layui-btn-container">
+                <button class="layui-btn layui-btn-normal layui-btn-sm data-add-btn" lay-event="add"> 添加 </button>
+                <button class="layui-btn layui-btn-sm layui-btn-danger data-delete-btn" lay-event="load"> 初始化金智CRM数据 </button>
+            </div>
+        </script>
+
+        <table class="layui-hide" id="currentTableId" lay-filter="currentTableFilter"></table>
+
+        <script type="text/html" id="currentTableBar">
+            <a class="layui-btn layui-btn-normal layui-btn-xs data-count-edit" lay-event="edit">编辑</a>
+        </script>
+
+    </div>
+</div>
+<script src="../lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+<script src="../js/config.js"></script>
+<script type="text/javascript">
+    var form, table;
+    var fromkey;
+    var key = "";
+    $(document).ready(function () {
+        fromkey = GetQueryValue('formkey')
+        login();
+    });
+
+    function GetQueryValue(queryName) {
+        var query = decodeURI(window.location.search.substring(1));
+        var vars = query.split("&");
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
+            if (pair[0] == queryName) { return pair[1]; }
+        }
+        return null;
+    }
+
+    //表头变量
+    var title = [];
+    var data = [];
+    var loadData = false;
+    
+    function login(){
+        console.log(document.cookie)
+        $.ajax({
+            type:"get",
+            url:"../api/DataManage.ashx?action=login",
+            data:{loginname:"admin",loginpass:"admin",entno:-9990},
+            dataType:"JSON",
+            success:function(ret){
+                getData();
+            },
+            error:function(e){
+
+            }
+        });
+    }
+    
+    function getTitle(){
+        $.ajax({
+            type:"get",
+            url: "../api/DataManage.ashx?action=GetTitleData",
+            data:{formKey:148,viewType:"listpc",refresh:148},
+            dataType:"JSON",
+            success:function(ret){
+                var json = ret["result"]["data"];
+                for(i=0;i<json.length;i++)
+                {
+                    if(json[i]["dataIndex"]=="operation")
+                    {
+                        title[title.length] = {title: "操作/状态", minWidth: 150, toolbar: "#currentTableBar", align: "center"};
+                    }
+                    else
+                    {
+                        title[title.length] = {field: json[i]["dataIndex"], width: json[i]["width"], title: json[i]["title"]};
+                    }
+                }
+                console.log(title);
+            },
+            error:function(e){
+                console.log(e);
+            }
+        });
+    }
+
+    function getData() {
+        var json = { query: ""};
+        $.ajax({
+            type:"post",
+            url: "../api/DataManage.ashx?action=GetDataList",
+            data: { formKey: fromkey, page: 1, pagesize: 100 },
+            dataType:"JSON",
+            success:function(ret){
+                if (ret["code"] == 0) {
+                    if (loadData) {
+                        data = ret["dataList"]["data"];
+                        console.log(data);
+                    }
+                    
+                    title = ret["headList"];
+                    console.log(title);
+                }
+                layui.use(['form', 'table'], function () {
+                    var $ = layui.jquery;
+                    form = layui.form,
+                        table = layui.table;
+
+                    table.render({
+                        elem: '#currentTableId',
+                        //url: getdate(),
+                        data: data,
+                        toolbar: '#toolbarDemo',
+                        defaultToolbar: ['filter', 'exports', 'print'],
+                        cols: [title],
+                        limits: [10, 15, 20, 25, 50, 100],
+                        limit: 10,
+                        page: true,
+                        skin: 'line'
+                    });
+
+                    // 监听搜索操作
+                    form.on('submit(data-search-btn)', function (data) {
+                        var result = JSON.stringify(data.field);
+                        layer.alert(result, {
+                            title: '最终的搜索信息'
+                        });
+
+                        //执行搜索重载
+                        table.reload('currentTableId', {
+                            page: {
+                                curr: 1
+                            }
+                            , where: {
+                                searchParams: result
+                            }
+                        }, 'data');
+
+                        return false;
+                    });
+
+                    /**
+                     * toolbar监听事件
+                     */
+                    table.on('toolbar(currentTableFilter)', function (obj) {
+                        if (obj.event === 'add') {  // 监听添加操作
+                            var index = layer.open({
+                                title: '添加客户',
+                                type: 2,
+                                shade: 0.2,
+                                maxmin: true,
+                                shadeClose: true,
+                                area: ['100%', '100%'],
+                                content: '../page/table/add.html?formkey=' + fromkey + '&msgid=&optype=add'
+                            });
+                            $(window).on("resize", function () {
+                                layer.full(index);
+                            });
+                        } else if (obj.event === 'load') {  // 监听删除操作
+                            loadData = true;
+                            getData();
+                        }
+                    });
+
+                    //监听表格复选框选择
+                    table.on('checkbox(currentTableFilter)', function (obj) {
+                        console.log(obj)
+                    });
+
+                    table.on('tool(currentTableFilter)', function (obj) {
+                        var data = obj.data;
+                        if (fromkey == "148") {
+                            key = "kh_id";
+                        }
+                        else if (fromkey == "150") {
+                            key = "ht_id";
+                        }
+                        else if (fromkey == "169") {
+                            key = "fh_id";
+                        }
+                        else if (fromkey == "158") {
+                            key = "xsh_id";
+                        }
+                        else if (fromkey == "161") {
+                            key = "bj_id";
+                        }
+                        else if (fromkey == "153") {
+                            key = "cgid";
+                        }
+                        else if (fromkey == "154") {
+                            key = "cpid";
+                        }
+                        else if (fromkey == "150") {
+                            key = "ht_id";
+                        }
+                        else if (fromkey == "150") {
+                            key = "ht_id";
+                        }
+                        else if (fromkey == "150") {
+                            key = "ht_id";
+                        }
+                        else if (fromkey == "150") {
+                            key = "ht_id";
+                        }
+                        else {
+
+                        }
+                        var idData = data[key];
+                        if (obj.event === 'edit') {
+
+                            var index = layer.open({
+                                title: '编辑用户',
+                                type: 2,
+                                shade: 0.2,
+                                maxmin: true,
+                                shadeClose: true,
+                                area: ['100%', '100%'],
+                                content: '../page/table/edit.html?formkey=' + fromkey + '&msgid='+idData+'&optype=edit',
+                                success: function (layero, index) {
+                                    var body = layer.getChildFrame('body', index);//少了这个是不能从父页面向子页面传值的
+                                    //获取子页面的元素，进行数据渲染
+                                    body.contents().find("#msgid").val(idData);
+                                    $.ajax({
+                                        type: "post",
+                                        url: "../api/DataManage.ashx?action=GetDataInfo",
+                                        data: { formKey: fromkey, msgid: idData },
+                                        dataType: "JSON",
+                                        success: function (ret) {
+                                            console.log(ret)
+                                            var details = ret["data"]["detail"];
+                                            console.log(details)
+                                            for (var i = 0; i < details.length; i++) {
+                                                //alert(details[i]["label"]);
+                                                var id = "#" + details[i]["label"];
+                                                console.log(id);
+                                                var value = details[i]["value"];
+                                                //alert(value);
+                                                console.log(value);
+                                                body.contents().find(id).val(value);
+                                            }
+                                        },
+                                        error: function (e) {
+                                            console.log(e);
+                                        }
+                                    });
+                                }
+                            });
+                            $(window).on("resize", function () {
+                                layer.full(index);
+                            });
+                            return false;
+                        } else if (obj.event === 'delete') {
+                            layer.confirm('真的删除行么', function (index) {
+                                obj.del();
+                                layer.close(index);
+                            });
+                        }
+                    });
+
+                });
+            },
+            error:function(e){
+                console.log(e);
+            }
+        });
+    }
+
+    
+</script>
+
+</body>
+</html>

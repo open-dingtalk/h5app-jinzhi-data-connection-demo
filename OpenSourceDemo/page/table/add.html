@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>layui</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="../../lib/jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="../../lib/layui-v2.5.5/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../css/public.css" media="all">
+    <style>
+        body {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="layui-form layuimini-form" id="formData">
+        <input type="hidden" id="opType" />
+        <input type="hidden" id="msgid" />
+    </div>
+    <script src="../../lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+    <script src="../../js/config.js"></script>
+    <script type="text/javascript">
+        var form;
+        var formkey;
+        var dateList = ",ht_date,ht_begindate,ht_enddate,cgdate,addedtime,sch_starttime,sch_planendtime,sch_endtime,xsh_date,xsh_expdate,bj_date,fh_date,libiodate,hh_date,hh_intime,hh_outtime,";
+        var childmx = String("[{'产品ID':'1','数量':'10','单价':'58.5','总价':'585','明细备注':'包含的测试产品'}]");
+        function GetQueryValue(queryName) {
+            var query = decodeURI(window.location.search.substring(1));
+            var vars = query.split("&");
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split("=");
+                if (pair[0] == queryName) { return pair[1]; }
+            }
+            return null;
+        }
+
+        function myfunction() {
+            alert(1);
+            $.ajax({
+                type: "post",
+                url: "../../api/DataManage.ashx?action=GetUserList",
+                data: {},
+                dataType: "JSON",
+                async: false,
+                success: function (ret) {
+                    var selectInput = '<div class="layui-form-item"><label class="layui-form-label">' + jsonData[i]["value"] + '</label><div class="layui-input-block"><select name="interest" lay-filter="' + jsonData[i]["label"] + '"><option value=""></option>';
+                    for (var j = 0; j < ret["result"]["list"].length; j++) {
+                        selectInput = selectInput + '<option value="' + ret["result"]["list"][j]["userid"] + '">' + ret["result"]["list"][j]["name"] + '</option>';
+                        alert(selectInput);
+                    }
+                    selectInput = selectInput + "</select></div></div>";
+                    $("#formData").append(selectInput);
+                },
+                error: function (e) {
+                    console.log(e);
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            formkey = GetQueryValue('formkey');
+            $.ajax({
+                type: "post",
+                url: "../../api/DataManage.ashx?action=GetTitle",
+                data: { formKey: formkey },
+                dataType: "JSON",
+                success: function (ret) {
+                    console.log(ret)
+                    var jsonData = ret["dataname"];
+                    console.log(Object.prototype.toString.call(dateList), dateList)
+                    for (i = 0; i < jsonData.length; i++) {
+                        var zdname = jsonData[i]["label"] + "";
+                        if (jsonData[i]["label"] == "child_mx") {
+                            $("#formData").append('<div class="layui-form-item"><label class="layui-form-label">产品明细</label><div class="layui-input-block"><input type="text" name="child_mx" placeholder="请输入产品明细" value="' + childmx + '" class="layui-input"></div></div>');
+                        }
+                        else if (dateList.indexOf(zdname) >= 0) {
+                            $("#formData").append('<div class="layui-inline"><label class= "layui-form-label">' + jsonData[i]["value"] + '</label><div class="layui-input-inline"><input type="text" name="' + jsonData[i]["label"] + '" id="date" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input"></div></div>');
+                        }
+                        else if (jsonData[i]["type"] == "select") {
+                            var selectInput = '<div class="layui-form-item"><label class="layui-form-label">' + jsonData[i]["value"] + '</label><div class="layui-input-block"><select name="' + jsonData[i]["label"] + '" lay-filter="' + jsonData[i]["label"] + '"><option value=""></option>';
+                            for (var j = 0; j < jsonData[i]["option"].length; j++) {
+                                selectInput = selectInput + '<option value="' + jsonData[i]["option"][j]["value"] + '">' + jsonData[i]["option"][j]["value"] + '</option>'
+                            }
+                            selectInput = selectInput + "</select></div></div>";
+                            $("#formData").append(selectInput);
+                        }
+                        else {
+                            $("#formData").append('<div class="layui-form-item"><label class="layui-form-label">' + jsonData[i]["value"] + '</label><div class="layui-input-block"><input type="text" name="' + jsonData[i]["label"] + '" placeholder="请输入' + jsonData[i]["value"] + '" value="" class="layui-input"></div></div>');
+                        }
+                    }
+                    $("#formData").append('<div class="layui-form-item"><div class="layui-input-block"><button class="layui-btn layui-btn-normal" lay-submit lay-filter="saveBtn">保存数据到金智CRM</button></div></div>')
+                    form.render();
+                },
+                error: function (e) {
+                    console.log(e);
+                }
+            });
+        });
+
+        layui.use(['form', 'laydate'], function () {
+            form = layui.form,
+                layer = layui.layer,
+                laydate = layui.laydate,
+                $ = layui.$;
+
+            //日期
+            laydate.render({
+                elem: '#date'
+            });
+
+            //监听提交
+            form.on('submit(saveBtn)', function (data) {
+                var index = layer.alert(JSON.stringify(data.field), {
+                    title: '最终的提交信息'
+                }, function () {
+
+                    $.ajax({
+                        type: "post",
+                        url: "../../api/DataManage.ashx?action=UpdateData",
+                        data: { formKey: formkey, msgid: 0, data: JSON.stringify(data.field) },
+                        dataType: "JSON",
+                        success: function (ret) {
+		var iframeIndex = parent.layer.getFrameIndex(window.name);
+                    	parent.layer.close(iframeIndex);
+                        },
+                        error: function (e) {
+                            console.log(e);
+                        }
+                    });
+
+                    
+
+                });
+
+                return false;
+            });
+
+        });
+    </script>
+</body>
+</html>

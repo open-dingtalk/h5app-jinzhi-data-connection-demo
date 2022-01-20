@@ -1,0 +1,68 @@
+{
+  "dataname": [
+    {
+      "label": "data_userid",
+      "value": "创建人"
+    },
+    {
+      "label": "hh_inlibid",
+      "value": "换入仓库"
+    },
+    {
+      "label": "hh_outlibid",
+      "value": "换出仓库"
+    },
+    {
+      "label": "hh_title",
+      "value": "主题"
+    },
+    {
+      "label": "hh_number",
+      "value": "换货单号"
+    },
+    {
+      "label": "hh_customerid",
+      "value": "对应客户"
+    },
+    {
+      "label": "hh_orderid",
+      "value": "合同/订单"
+    },
+    {
+      "label": "hh_type",
+      "value": "分类"
+    },
+    {
+      "label": "hh_date",
+      "value": "换货日期"
+    },
+    {
+      "label": "hh_inempid",
+      "value": "换入操作员"
+    },
+    {
+      "label": "hh_intime",
+      "value": "换入时间"
+    },
+    {
+      "label": "hh_outempid",
+      "value": "换出操作员"
+    },
+    {
+      "label": "hh_outtime",
+      "value": "换出时间"
+    },
+    {
+      "label": "hh_remark",
+      "value": "备注"
+    },
+    {
+      "label": "hh_state",
+      "value": "状态"
+    },
+    {
+      "label": "child_mx",
+      "value": "产品明细"
+    }
+  ]
+}

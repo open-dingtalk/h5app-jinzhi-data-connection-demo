@@ -1,0 +1,24 @@
+{
+  "dataname": [
+    {
+      "label": "data_userid",
+      "type": "select",
+      "value": "创建人"
+    },
+    {
+      "label": "cpname",
+      "type": "input",
+      "value": "产品名称"
+    },
+    {
+      "label": "cpunit",
+      "type": "input",
+      "value": "产品单位"
+    },
+    {
+      "label": "unitrate",
+      "type": "input",
+      "value": "单位换算"
+    }
+  ]
+}

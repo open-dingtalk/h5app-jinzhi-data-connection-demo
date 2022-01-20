@@ -1,0 +1,84 @@
+{
+  "dataname": [
+    {
+      "label": "data_userid",
+      "value": "创建人"
+    },
+    {
+      "label": "bj_customerid",
+      "value": "对应客户"
+    },
+    {
+      "label": "bj_bjren",
+      "value": "报价人"
+    },
+    {
+      "label": "bj_date",
+      "value": "报价日期"
+    },
+    {
+      "label": "bj_price",
+      "value": "报价金额"
+    },
+    {
+      "label": "bj_title",
+      "value": "主题"
+    },
+    {
+      "label": "bj_number",
+      "value": "报价单号"
+    },
+    {
+      "label": "bj_state",
+      "value": "转成订单"
+    },
+    {
+      "label": "bj_jshren",
+      "value": "接收人"
+    },
+    {
+      "label": "bj_lianxi",
+      "value": "联系方式"
+    },
+    {
+      "label": "bj_xshid",
+      "value": "对应机会"
+    },
+    {
+      "label": "bj_moneyzhekou",
+      "value": "优惠折扣率"
+    },
+    {
+      "label": "bj_kjmoney",
+      "value": "优惠抹零金额"
+    },
+    {
+      "label": "bj_fjmoneylx",
+      "value": "附加费用分类"
+    },
+    {
+      "label": "bj_fjmoney",
+      "value": "附加费用金额"
+    },
+    {
+      "label": "bj_jfremark",
+      "value": "交付说明"
+    },
+    {
+      "label": "bj_fkremark",
+      "value": "付款说明"
+    },
+    {
+      "label": "bj_bzremark",
+      "value": "包装运输"
+    },
+    {
+      "label": "bj_remark",
+      "value": "备注"
+    },
+    {
+      "label": "child_mx",
+      "value": "产品明细"
+    }
+  ]
+}

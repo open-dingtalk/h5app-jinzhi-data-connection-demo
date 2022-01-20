@@ -1,0 +1,96 @@
+{
+  "dataname": [
+    {
+      "label": "data_userid",
+      "value": "创建人"
+    },
+    {
+      "label": "fh_customerid",
+      "value": "对应客户"
+    },
+    {
+      "label": "fh_date",
+      "value": "发货日期"
+    },
+    {
+      "label": "fh_number",
+      "value": "发货单号"
+    },
+    {
+      "label": "fh_mode",
+      "value": "发货方式"
+    },
+    {
+      "label": "fh_htorder",
+      "value": "对应订单"
+    },
+    {
+      "label": "fh_title",
+      "value": "发货主题"
+    },
+    {
+      "label": "fh_yunfei",
+      "value": "运费"
+    },
+    {
+      "label": "fh_jianshu",
+      "value": "打包件数"
+    },
+    {
+      "label": "fh_kg",
+      "value": "重量"
+    },
+    {
+      "label": "fh_shipper",
+      "value": "发货人"
+    },
+    {
+      "label": "fh_preside",
+      "value": "所有者"
+    },
+    {
+      "label": "fh_lxrid",
+      "value": "联系人"
+    },
+    {
+      "label": "fh_linkman",
+      "value": "收货人"
+    },
+    {
+      "label": "fh_tel",
+      "value": "电话"
+    },
+    {
+      "label": "fh_handset",
+      "value": "手机"
+    },
+    {
+      "label": "fh_post",
+      "value": "邮编"
+    },
+    {
+      "label": "fh_address",
+      "value": "地址"
+    },
+    {
+      "label": "fh_email",
+      "value": "邮箱"
+    },
+    {
+      "label": "fh_msn",
+      "value": "MSN账号"
+    },
+    {
+      "label": "fh_remark",
+      "value": "备注"
+    },
+    {
+      "label": "fh_state",
+      "value": "发货状态"
+    },
+    {
+      "label": "child_mx",
+      "value": "产品明细"
+    }
+  ]
+}

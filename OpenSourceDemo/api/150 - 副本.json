@@ -1,0 +1,124 @@
+{
+  "dataname": [
+    {
+      "label": "data_userid",
+      "value": "创建人"
+    },
+    {
+      "label": "ht_customerid",
+      "value": "对应客户"
+    },
+    {
+      "label": "ht_date",
+      "value": "签单日期"
+    },
+    {
+      "label": "ht_preside",
+      "value": "所有者"
+    },
+    {
+      "label": "ht_state",
+      "value": "状态"
+    },
+    {
+      "label": "ht_summoney",
+      "value": "总金额"
+    },
+    {
+      "label": "ht_order",
+      "value": "单据类型"
+    },
+    {
+      "label": "ht_title",
+      "value": "主题"
+    },
+    {
+      "label": "ht_number",
+      "value": "合同单号"
+    },
+    {
+      "label": "ht_lxrid",
+      "value": "对应联系人"
+    },
+    {
+      "label": "ht_lxrinfo",
+      "value": "联系方式"
+    },
+    {
+      "label": "ht_xshid",
+      "value": "对应机会"
+    },
+    {
+      "label": "ht_type",
+      "value": "自定义分类"
+    },
+    {
+      "label": "ht_paymode",
+      "value": "付款方式"
+    },
+    {
+      "label": "ht_begindate",
+      "value": "开始日期"
+    },
+    {
+      "label": "ht_cusub",
+      "value": "客户签约人"
+    },
+    {
+      "label": "ht_wesub",
+      "value": "我方签约人"
+    },
+    {
+      "label": "ht_moneyzhekou",
+      "value": "优惠折扣率"
+    },
+    {
+      "label": "ht_kjmoney",
+      "value": "优惠抹零金额"
+    },
+    {
+      "label": "ht_fjmoneylx",
+      "value": "附加费用分类"
+    },
+    {
+      "label": "ht_fjmoney",
+      "value": "附加费用金额"
+    },
+    {
+      "label": "ht_summemo",
+      "value": "外币备注"
+    },
+    {
+      "label": "ht_deliplace",
+      "value": "交付地点"
+    },
+    {
+      "label": "ht_enddate",
+      "value": "最晚发货日"
+    },
+    {
+      "label": "ht_wuliutype",
+      "value": "发货方式"
+    },
+    {
+      "label": "ht_yunfeimoney",
+      "value": "预计运费"
+    },
+    {
+      "label": "fahuoaddressid",
+      "value": "收货地址"
+    },
+    {
+      "label": "ht_contract",
+      "value": "合同正文"
+    },
+    {
+      "label": "ht_remark",
+      "value": "备注"
+    },
+    {
+      "label": "child_mx",
+      "value": "产品明细"
+    }
+  ]
+}

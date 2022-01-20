@@ -1,0 +1,196 @@
+{
+  "dataname": [
+    {
+      "label": "data_userid",
+      "value": "原属员工"
+    },
+    {
+      "label": "kh_pkhid",
+      "value": "上级客户"
+    },
+    {
+      "label": "kh_class",
+      "value": "类别"
+    },
+    {
+      "label": "kh_name",
+      "value": "客户名称"
+    },
+    {
+      "label": "kh_sex",
+      "value": "性别"
+    },
+    {
+      "label": "kh_shortname",
+      "value": "助记简称"
+    },
+    {
+      "label": "kh_industry",
+      "value": "行业"
+    },
+    {
+      "label": "kh_employees",
+      "value": "行业"
+    },
+    {
+      "label": "kh_address",
+      "value": "家庭地址"
+    },
+    {
+      "label": "kh_country",
+      "value": "国家地区"
+    },
+    {
+      "label": "kh_province",
+      "value": "省份"
+    },
+    {
+      "label": "kh_city",
+      "value": "城市"
+    },
+    {
+      "label": "kh_coaddress",
+      "value": "单位地址"
+    },
+    {
+      "label": "kh_hottype",
+      "value": "热点客户"
+    },
+    {
+      "label": "kh_hotlevel",
+      "value": "热度"
+    },
+    {
+      "label": "kh_hotfl",
+      "value": "热点分类"
+    },
+    {
+      "label": "kh_hotmemo",
+      "value": "热点说明"
+    },
+    {
+      "label": "kh_type",
+      "value": "种类"
+    },
+    {
+      "label": "kh_status",
+      "value": "阶段"
+    },
+    {
+      "label": "kh_sn",
+      "value": "编号"
+    },
+    {
+      "label": "kh_handset",
+      "value": "手机"
+    },
+    {
+      "label": "kh_email",
+      "value": "邮箱"
+    },
+    {
+      "label": "kh_dingtalk",
+      "value": "钉钉号"
+    },
+    {
+      "label": "kh_tel",
+      "value": "家庭电话"
+    },
+    {
+      "label": "kh_weixin",
+      "value": "微信号"
+    },
+    {
+      "label": "kh_qq",
+      "value": "QQ"
+    },
+    {
+      "label": "kh_skype",
+      "value": "Skype"
+    },
+    {
+      "label": "kh_wangwang",
+      "value": "旺旺"
+    },
+    {
+      "label": "kh_worktel",
+      "value": "工作电话"
+    },
+    {
+      "label": "kh_fax",
+      "value": "传真"
+    },
+    {
+      "label": "kh_pst",
+      "value": "邮编"
+    },
+    {
+      "label": "kh_department",
+      "value": "部门"
+    },
+    {
+      "label": "kh_appellation",
+      "value": "称谓"
+    },
+    {
+      "label": "kh_preside",
+      "value": "负责业务"
+    },
+    {
+      "label": "kh_headship",
+      "value": "职务"
+    },
+    {
+      "label": "kh_web",
+      "value": "网址"
+    },
+    {
+      "label": "kh_befontof",
+      "value": "爱好"
+    },
+    {
+      "label": "kh_from",
+      "value": "来源"
+    },
+    {
+      "label": "kh_billinfo",
+      "value": "开票资料"
+    },
+    {
+      "label": "kh_info",
+      "value": "公司简介"
+    },
+    {
+      "label": "kh_ralagrade",
+      "value": "关系等级"
+    },
+    {
+      "label": "kh_creditgrade",
+      "value": "信用等级"
+    },
+    {
+      "label": "kh_valrating",
+      "value": "价值评估"
+    },
+    {
+      "label": "kh_cttype",
+      "value": "证件类型"
+    },
+    {
+      "label": "kh_ctnumber",
+      "value": "证件号码"
+    },
+    {
+      "label": "kh_contype",
+      "value": "联系人分类"
+    },
+    {
+      "label": "kh_remark",
+      "value": "备注"
+    },
+    {
+      "label": "kh_jibie",
+      "value": "客户级别"
+    }
+  ]
+}

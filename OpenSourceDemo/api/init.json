@@ -1,0 +1,69 @@
+{
+  "homeInfo": {
+    "title": "首页",
+    "href": "page/welcome-1.html?t=1"
+  },
+  "logoInfo": {
+    "title": "JZSOFT",
+    "image": "images/logo.png",
+    "href": ""
+  },
+  "menuInfo": [
+    {
+      "title": "",
+      "icon": "fa fa-address-book",
+      "href": "",
+      "target": "_self",
+      "child": [
+        {
+          "title": "主页",
+          "href": "page/welcome-1.html",
+          "icon": "fa fa-tachometer",
+          "target": "_self"
+        },
+        {
+          "title": "客户资料",
+          "href": "page/table.html?formkey=148",
+          "icon": "fa fa-file-text",
+          "target": "_self"
+        },
+        {
+          "title": "合同订单",
+          "href": "page/table.html?formkey=150",
+          "icon": "fa fa-file-text",
+          "target": "_self"
+        },
+        {
+          "title": "发货单",
+          "href": "page/table.html?formkey=169",
+          "icon": "fa fa-file-text",
+          "target": "_self"
+        },
+        {
+          "title": "销售机会",
+          "href": "page/table.html?formkey=158",
+          "icon": "fa fa-file-text",
+          "target": "_self"
+        },
+        {
+          "title": "报价记录",
+          "href": "page/table.html?formkey=161",
+          "icon": "fa fa-file-text",
+          "target": "_self"
+        },
+        {
+          "title": "采购单",
+          "href": "page/table.html?formkey=153",
+          "icon": "fa fa-file-text",
+          "target": "_self"
+        },
+        {
+          "title": "产品信息",
+          "href": "page/table.html?formkey=154",
+          "icon": "fa fa-file-text",
+          "target": "_self"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "dataname": [
+    {
+      "label": "data_userid",
+      "value": "创建人"
+    },
+    {
+      "label": "cpname",
+      "value": "产品名称"
+    },
+    {
+      "label": "cpunit",
+      "value": "产品单位"
+    },
+    {
+      "label": "unitrate",
+      "value": "单位换算"
+    },
+    {
+      "label": "cp_parentid",
+      "value": "基准产品"
+    },
+    {
+      "label": "cptype",
+      "value": "产品型号"
+    },
+    {
+      "label": "cpguige",
+      "value": "产品规格"
+    },
+    {
+      "label": "typeid",
+      "value": "产品类别"
+    },
+    {
+      "label": "cpno",
+      "value": "产品编号"
+    },
+    {
+      "label": "isstop",
+      "value": "产品状态"
+    },
+    {
+      "label": "addedtime",
+      "value": "上架时间"
+    },
+    {
+      "label": "cparea",
+      "value": "产品产地"
+    },
+    {
+      "label": "cpbrand",
+      "value": "产品品牌"
+    },
+    {
+      "label": "cbprice",
+      "value": "成本价格"
+    },
+    {
+      "label": "issnmanage",
+      "value": "序列号管理"
+    },
+    {
+      "label": "ispicimanage",
+      "value": "批次号管理"
+    },
+    {
+      "label": "gysid",
+      "value": "默认供应商"
+    },
+    {
+      "label": "cpimg",
+      "value": "产品图片"
+    },
+    {
+      "label": "cpbarcode",
+      "value": "条形码"
+    },
+    {
+      "label": "cpweight",
+      "value": "产品重量"
+    },
+    {
+      "label": "preprice1",
+      "value": "零售价格"
+    },
+    {
+      "label": "preprice2",
+      "value": "预设价格1"
+    },
+    {
+      "label": "preprice3",
+      "value": "预设价格2"
+    },
+    {
+      "label": "preprice4",
+      "value": "预设价格3"
+    },
+    {
+      "label": "isstock",
+      "value": "是否算库存"
+    },
+    {
+      "label": "stockup",
+      "value": "库存上限"
+    },
+    {
+      "label": "stockdown",
+      "value": "库存下限"
+    },
+    {
+      "label": "cpcontent",
+      "value": "产品说明"
+    },
+    {
+      "label": "cpremark",
+      "value": "产品备注"
+    }
+  ]
+}

@@ -1,0 +1,364 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{82A4BB07-E57C-420F-95A9-D6D4C8C080F6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenSourceDemo</RootNamespace>
+    <AssemblyName>OpenSourceDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44397</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="css\layuimini.css" />
+    <Content Include="css\public.css" />
+    <Content Include="css\themes\default.css" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\captcha.jpg" />
+    <Content Include="images\donate_qrcode.png" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\home.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="index.html" />
+    <Content Include="js\config.js" />
+    <Content Include="js\lay-config.js" />
+    <Content Include="js\lay-module\echarts\echarts.js" />
+    <Content Include="js\lay-module\echarts\echartsTheme.js" />
+    <Content Include="js\lay-module\iconPicker\iconPickerFa.js" />
+    <Content Include="js\lay-module\layarea\layarea.js" />
+    <Content Include="js\lay-module\layuimini\miniAdmin.js" />
+    <Content Include="js\lay-module\layuimini\miniMenu.js" />
+    <Content Include="js\lay-module\layuimini\miniTab.js" />
+    <Content Include="js\lay-module\layuimini\miniTheme.js" />
+    <Content Include="js\lay-module\layuimini\miniTongji.js" />
+    <Content Include="js\lay-module\step-lay\step.css" />
+    <Content Include="js\lay-module\step-lay\step.js" />
+    <Content Include="js\lay-module\tableSelect\tableSelect.js" />
+    <Content Include="js\lay-module\treetable-lay\treetable.css" />
+    <Content Include="js\lay-module\treetable-lay\treetable.js" />
+    <Content Include="js\lay-module\wangEditor\wangEditor.css" />
+    <Content Include="js\lay-module\wangEditor\wangEditor.js" />
+    <Content Include="js\lay-module\wangEditor\wangEditor.min.css" />
+    <Content Include="js\lay-module\wangEditor\wangEditor.min.js" />
+    <Content Include="lib\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="lib\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="lib\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="lib\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="lib\jq-module\jquery.particleground.min.js" />
+    <Content Include="lib\jq-module\paigusu.min.js" />
+    <Content Include="lib\jq-module\zyupload\zyupload-1.0.0.min.css" />
+    <Content Include="lib\jq-module\zyupload\zyupload-1.0.0.min.js" />
+    <Content Include="lib\jquery-3.4.1\jquery-3.4.1.min.js" />
+    <Content Include="lib\layui-v2.5.5\css\layui.css" />
+    <Content Include="lib\layui-v2.5.5\css\layui.mobile.css" />
+    <Content Include="lib\layui-v2.5.5\css\modules\code.css" />
+    <Content Include="lib\layui-v2.5.5\css\modules\laydate\default\laydate.css" />
+    <Content Include="lib\layui-v2.5.5\css\modules\layer\default\icon-ext.png" />
+    <Content Include="lib\layui-v2.5.5\css\modules\layer\default\icon.png" />
+    <Content Include="lib\layui-v2.5.5\css\modules\layer\default\layer.css" />
+    <Content Include="lib\layui-v2.5.5\css\modules\layer\default\loading-0.gif" />
+    <Content Include="lib\layui-v2.5.5\css\modules\layer\default\loading-1.gif" />
+    <Content Include="lib\layui-v2.5.5\css\modules\layer\default\loading-2.gif" />
+    <Content Include="lib\layui-v2.5.5\font\iconfont.svg" />
+    <Content Include="lib\layui-v2.5.5\images\face\0.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\1.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\10.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\11.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\12.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\13.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\14.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\15.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\16.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\17.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\18.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\19.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\2.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\20.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\21.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\22.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\23.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\24.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\25.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\26.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\27.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\28.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\29.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\3.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\30.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\31.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\32.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\33.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\34.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\35.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\36.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\37.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\38.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\39.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\4.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\40.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\41.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\42.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\43.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\44.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\45.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\46.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\47.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\48.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\49.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\5.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\50.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\51.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\52.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\53.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\54.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\55.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\56.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\57.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\58.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\59.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\6.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\60.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\61.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\62.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\63.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\64.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\65.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\66.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\67.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\68.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\69.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\7.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\70.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\71.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\8.gif" />
+    <Content Include="lib\layui-v2.5.5\images\face\9.gif" />
+    <Content Include="lib\layui-v2.5.5\layui.all.js" />
+    <Content Include="lib\layui-v2.5.5\layui.js" />
+    <Content Include="lib\layui-v2.5.5\lay\modules\carousel.js" />
+    <Content Include="lib\layui-v2.5.5\lay\modules\code.js" />
+    <Content Include="lib\layui-v2.5.5\lay\modules\colorpicker.js" />
+    <Content Include="lib\layui-v2.5.5\lay\modules\element.js" />
+    <Content Include="lib\layui-v2.5.5\lay\modules\flow.js" />
+    <Content Include="lib\layui-v2.5.5\lay\modules\form.js" />
+    <Content Include="lib\layui-v2.5.5\lay\modules\jquery.js" />
+    <Content Include="lib\layui-v2.5.5\lay\modules\laydate.js" />
+    <Content Include="lib\layui-v2.5.5\lay\modules\layedit.js" />
+    <Content Include="lib\layui-v2.5.5\lay\modules\layer.js" />
+    <Content Include="lib\layui-v2.5.5\lay\modules\laypage.js" />
+    <Content Include="lib\layui-v2.5.5\lay\modules\laytpl.js" />
+    <Content Include="lib\layui-v2.5.5\lay\modules\mobile.js" />
+    <Content Include="lib\layui-v2.5.5\lay\modules\rate.js" />
+    <Content Include="lib\layui-v2.5.5\lay\modules\slider.js" />
+    <Content Include="lib\layui-v2.5.5\lay\modules\table.js" />
+    <Content Include="lib\layui-v2.5.5\lay\modules\transfer.js" />
+    <Content Include="lib\layui-v2.5.5\lay\modules\tree.js" />
+    <Content Include="lib\layui-v2.5.5\lay\modules\upload.js" />
+    <Content Include="lib\layui-v2.5.5\lay\modules\util.js" />
+    <Content Include="page\404.html" />
+    <Content Include="page\area.html" />
+    <Content Include="page\button.html" />
+    <Content Include="page\color-select.html" />
+    <Content Include="page\editor.html" />
+    <Content Include="page\form-step.html" />
+    <Content Include="page\form.html" />
+    <Content Include="page\icon-picker.html" />
+    <Content Include="page\icon.html" />
+    <Content Include="page\layer.html" />
+    <Content Include="page\login-1.html" />
+    <Content Include="page\login-2.html" />
+    <Content Include="page\menu.html" />
+    <Content Include="page\setting.html" />
+    <Content Include="page\table-select.html" />
+    <Content Include="page\table.html" />
+    <Content Include="page\table\add.html" />
+    <Content Include="page\table\edit.html" />
+    <Content Include="page\upload.html" />
+    <Content Include="page\user-password.html" />
+    <Content Include="page\user-setting.html" />
+    <Content Include="page\welcome-1.html" />
+    <Content Include="page\welcome-2.html" />
+    <Content Include="page\welcome-3.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="api\Common.cs" />
+    <Compile Include="api\DataManage.ashx.cs">
+      <DependentUpon>DataManage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="api\clear.json" />
+    <Content Include="api\init.json" />
+    <Content Include="api\menus.json" />
+    <Content Include="api\table.json" />
+    <Content Include="api\tableSelect.json" />
+    <Content Include="api\upload.json" />
+    <Content Include="js\lay-module\wangEditor\fonts\w-e-icon.woff" />
+    <Content Include="js\lay-module\wangEditor\wangEditor.min.js.map" />
+    <Content Include="lib\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="lib\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="lib\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="lib\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="lib\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="lib\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\core.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\list.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\path.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="lib\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="lib\layui-v2.5.5\font\iconfont.eot" />
+    <Content Include="lib\layui-v2.5.5\font\iconfont.ttf" />
+    <Content Include="lib\layui-v2.5.5\font\iconfont.woff" />
+    <Content Include="lib\layui-v2.5.5\font\iconfont.woff2" />
+    <Content Include="api\DataManage.ashx" />
+    <Content Include="api\148.json" />
+    <Content Include="api\150.json" />
+    <Content Include="api\153.json" />
+    <Content Include="api\154.json" />
+    <Content Include="api\156.json" />
+    <Content Include="api\158.json" />
+    <Content Include="api\161.json" />
+    <Content Include="api\169.json" />
+    <Content Include="api\189.json" />
+    <Content Include="api\191.json" />
+    <Content Include="api\228.json" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58300</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44397/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+    <MonoDevelop>
+      <Properties>
+        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,24 @@
+{
+  "dataname": [
+    {
+      "label": "data_userid",
+      "type": "select",
+      "value": "创建人"
+    },
+    {
+      "label": "xsh_customerid",
+      "type": "select",
+      "value": "对应客户"
+    },
+    {
+      "label": "xsh_title",
+      "type": "input",
+      "value": "主题"
+    },
+    {
+      "label": "xsh_date",
+      "type": "date",
+      "value": "发现时间"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "dataname": [
+    {
+      "label": "data_userid",
+      "value": "原属员工",
+      "type": "select",
+      "msg": "这里填写上级客户，可为空。",
+      "option": [
+        {
+          "label": 1,
+          "value": "刘小兵"
+        },
+        {
+          "label": 2,
+          "value": "测试2"
+        },
+        {
+          "label": 3,
+          "value": "测试3"
+        },
+        {
+          "label": 4,
+          "value": "测试4"
+        }
+      ]
+    },
+    {
+      "label": "kh_pkhid",
+      "value": "上级客户",
+      "type": "text",
+      "msg": "这里填写上级客户，可为空。"
+    },
+    {
+      "label": "kh_class",
+      "value": "类别",
+      "type": "select",
+      "msg": "这里填写上级客户，可为空。",
+      "option": [
+        {
+          "label": 0,
+          "value": "个人客户"
+        },
+        {
+          "label": 1,
+          "value": "企业客户"
+        },
+        {
+          "label": 3,
+          "value": "供应商"
+        },
+        {
+          "label": 4,
+          "value": "个人供应商"
+        }
+      ]
+    },
+    {
+      "label": "kh_name",
+      "value": "客户名称",
+      "type": "text",
+      "msg": "这里填写客户名称，不可为空。"
+    }
+  ]
+}

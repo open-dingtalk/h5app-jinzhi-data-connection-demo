@@ -1,0 +1,84 @@
+{
+  "dataname": [
+    {
+      "label": "data_userid",
+      "value": "创建人"
+    },
+    {
+      "label": "gysid",
+      "value": "供应商"
+    },
+    {
+      "label": "cgno",
+      "value": "采购单号"
+    },
+    {
+      "label": "summoney",
+      "value": "采购金额"
+    },
+    {
+      "label": "cgdate",
+      "value": "采购日期"
+    },
+    {
+      "label": "cg_zxstate",
+      "value": "执行状态"
+    },
+    {
+      "label": "order_khid",
+      "value": "关联订单客户"
+    },
+    {
+      "label": "cgname",
+      "value": "采购主题"
+    },
+    {
+      "label": "gys_lxrid",
+      "value": "供应商联系人"
+    },
+    {
+      "label": "gys_lxrinfo",
+      "value": "联系方式"
+    },
+    {
+      "label": "cgtype",
+      "value": "自定义采购分类"
+    },
+    {
+      "label": "gysjingban",
+      "value": "供应商代表"
+    },
+    {
+      "label": "empid",
+      "value": "我方代表"
+    },
+    {
+      "label": "cg_moneyzhekou",
+      "value": "优惠折扣率"
+    },
+    {
+      "label": "cg_kjmoney",
+      "value": "优惠抹零金额"
+    },
+    {
+      "label": "cg_fjmoneylx",
+      "value": "附加费用分类"
+    },
+    {
+      "label": "cg_fjmoney",
+      "value": "附加费用金额"
+    },
+    {
+      "label": "order_htid",
+      "value": "关联订单"
+    },
+    {
+      "label": "cgremark",
+      "value": "采购摘要"
+    },
+    {
+      "label": "child_mx",
+      "value": "产品明细"
+    }
+  ]
+}

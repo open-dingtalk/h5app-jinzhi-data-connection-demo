@@ -1,0 +1,29 @@
+{
+  "dataname": [
+    {
+      "label": "data_userid",
+      "type": "select",
+      "value": "创建人"
+    },
+    {
+      "label": "bj_customerid",
+      "type": "select",
+      "value": "对应客户"
+    },
+    {
+      "label": "bj_bjren",
+      "type": "select",
+      "value": "报价人"
+    },
+    {
+      "label": "bj_date",
+      "type": "date",
+      "value": "报价日期"
+    },
+    {
+      "label": "bj_price",
+      "type": "input",
+      "value": "报价金额"
+    }
+  ]
+}
