@@ -94,7 +94,7 @@ git clone https://github.com/open-dingtalk/h5app-jinzhi-data-connection-demo.git
 3. 获取部门用户基础信息，文档链接：https://open.dingtalk.com/document/orgapp-server/queries-the-simple-information-of-a-department-user
 4. 客户资料，文档链接：https://open.dingtalk.com/document/orgapp-server/add-or-edit-customer-profile
 5. 产品信息，文档链接：https://open.dingtalk.com/document/orgapp-server/add-or-edit-product-information
-6. 销售机会，文档链接：https://developers.dingtalk.com/document/app/get-a-list-of-all-contracts-for-the-process-taskhttps://open.dingtalk.com/document/orgapp-server/add-or-edit-opportunities
+6. 销售机会，文档链接：https://open.dingtalk.com/document/orgapp-server/add-or-edit-opportunities
 7. 报价记录，文档链接：https://open.dingtalk.com/document/orgapp-server/add-or-edit-quotation-records
 8. 合同订单，文档链接：https://open.dingtalk.com/document/orgapp-server/add-or-edit-contract-orders
 9. 采购单，文档链接：https://open.dingtalk.com/document/orgapp-server/edit-purchase-order
